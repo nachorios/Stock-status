@@ -44,30 +44,6 @@ class Link extends \Magento\Catalog\Block\Product\View
     public function isActive(){
         return $this->_scopeConfig->getValue('stock_status/settings/enable');
     }
-/*
-    public function getInStock(){
-        return $this->_scopeConfig->getValue('stock_status/quanty/in_stock');
-    }
-
-    public function getLowStock(){
-        return $this->_scopeConfig->getValue('stock_status/quanty/low_stock');
-    }
-
-    public function getOutOfStock(){
-        return $this->_scopeConfig->getValue('stock_status/quanty/out_of_stock');
-    }
-
-    public function getProductId()
-    {
-        return $this->getProduct()->getId();
-    }
-
-    public function getProductQty()
-    {
-        $productStock = $this->stockRegistry->getStockItem($this->getProduct()->getId());
-        $productQty = $productStock->getQty();
-        return $productQty;
-    }*/
 
     public function getQty(){
         $productStock = $this->stockRegistry->getStockItem($this->getProduct()->getId());
