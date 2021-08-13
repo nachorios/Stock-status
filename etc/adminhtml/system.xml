@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+	<system>
+		<tab id="bootcamp" translate="label" sortOrder="10">
+			<label>Bootcamp</label>
+		</tab>
+		<section id="stock_status" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+			<label>Stock Status</label>
+			<tab>bootcamp</tab>
+			<resource>Bootcamp_StockStatus::bootcamp</resource>
+			<group id="settings" translate="label" type="text" sortOrder="250" showInDefault="1" showInWebsite="1" showInStore="1">
+				<label>Settings</label>
+				<field id="enable" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Enable</label>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+			</group>
+
+			<group id="quanty" translate="label" type="text" sortOrder="260" showInDefault="1" showInWebsite="1" showInStore="1">
+				<label>Quanty</label>
+				<field id="in_stock" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>In Stock</label>
+					
+				</field>
+								<field id="low_stock" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Low Stock</label>
+					
+				</field>
+								<field id="out_of_stock" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Out of Stock</label>
+					
+				</field>
+			</group>
+
+		</section>
+	</system>
+</config>

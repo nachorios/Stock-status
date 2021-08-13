@@ -1,0 +1,27 @@
+<?php
+use Bootcamp\StockStatus\Block\Catalog\Link;
+/** @var Link $block */
+?>
+<?php if($block->isActive()): ?>
+<p> <?= __('Stock status')?>:  <?= $block->getQty() ?> </p>
+
+<?php endif; ?>
+
+<style>
+
+    .status-stock{
+        font-weigt: bold;
+    }
+
+    .status-in-stock{
+        color: green;
+    }
+    
+    .status-low-stock{
+        color: yellow;
+    }
+    
+    .status-out-of-stock{
+        color: red;
+    }
+</style>
